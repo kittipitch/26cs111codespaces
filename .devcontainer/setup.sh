@@ -9,7 +9,7 @@ gh auth login -h github.com -w
 
 USERNAME=$(gh api user -q .login)
 REPO_NAME="26cs111repo"
-REMOTE_URL="https://github.com/${USERNAME}/${REPO_NAME}.git"
+REMOTE_URL="git@github.com:${USERNAME}/${REPO_NAME}.git"
 
 # Init git if not already done
 cd /workspaces/26cs111codespaces
@@ -28,10 +28,8 @@ if gh repo create "$REPO_NAME" --private --source=. --remote=origin --push 2>/de
   echo "✅ Done! Your work is saved at: https://github.com/${USERNAME}/${REPO_NAME}"
 else
   echo "Repo already exists — connecting to it..."
-  TOKEN=$(gh auth token)
   git remote add origin "$REMOTE_URL" 2>/dev/null || git remote set-url origin "$REMOTE_URL"
-  git push -u "https://${TOKEN}@github.com/${USERNAME}/${REPO_NAME}.git" main
-  git remote set-url origin "$REMOTE_URL"
+  git push -u origin main
   echo ""
   echo "✅ Done! Your work is saved at: https://github.com/${USERNAME}/${REPO_NAME}"
 fi
