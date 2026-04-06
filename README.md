@@ -10,7 +10,7 @@ Once your Codespace is open, run this once in the terminal:
 bash .devcontainer/setup.sh
 ```
 
-This will create a private repo called `26cs111codespaces` on your GitHub and push your work there.
+This will create a private repo called `26cs111repo` on your GitHub and push your work there.
 
 ---
 
