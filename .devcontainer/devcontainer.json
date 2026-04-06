@@ -9,7 +9,7 @@
         "github.copilot.chat.enabled": false,
         "github.copilot.editor.enableAutoCompletions": false,
         "workbench.secondarySideBar.visible": false,
-        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.defaultInterpreterPath": "/usr/bin/python3",
         "mypy-type-checker.args": [
           "--ignore-missing-imports",
           "--check-untyped-defs"
