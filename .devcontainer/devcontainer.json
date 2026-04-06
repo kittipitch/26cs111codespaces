@@ -1,6 +1,6 @@
 {
   "name": "CS111 Fundamentals of Programming",
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
   "customizations": {
     "vscode": {
       "settings": {
@@ -8,6 +8,8 @@
         "github.copilot.enable": { "*": false },
         "github.copilot.chat.enabled": false,
         "github.copilot.editor.enableAutoCompletions": false,
+        "workbench.secondarySideBar.visible": false,
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
         "python.analysis.typeCheckingMode": "basic",
         "mypy-type-checker.args": [
           "--ignore-missing-imports",
@@ -26,5 +28,5 @@
       ]
     }
   },
-  "postCreateCommand": "pip3 install mypy pandas numpy"
+  "postCreateCommand": "pip install --quiet mypy pandas numpy && echo 'CS111 ready!'"
 }
