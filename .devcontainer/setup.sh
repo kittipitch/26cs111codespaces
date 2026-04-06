@@ -5,6 +5,9 @@ set -e
 USERNAME=$(gh api user -q .login)
 REPO_NAME="26cs111repo"
 
+# Request repo creation permission (opens browser once)
+gh auth refresh -h github.com -s repo
+
 rm -rf /workspaces/26cs111codespaces/.git
 cd /workspaces/26cs111codespaces
 git init
