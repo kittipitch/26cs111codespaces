@@ -18,8 +18,7 @@
       },
       "extensions": [
         "ms-python.python",
-        "ms-python.mypy-type-checker",
-        "tomoki1207.pdf"
+        "ms-python.mypy-type-checker"
       ],
       "extensions.unwanted": [
         "GitHub.copilot",
