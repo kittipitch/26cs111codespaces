@@ -1,6 +1,6 @@
 {
   "name": "CS111 Fundamentals of Programming",
-  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "build": { "dockerfile": "Dockerfile" },
   "customizations": {
     "vscode": {
       "settings": {
@@ -28,5 +28,5 @@
       ]
     }
   },
-  "postCreateCommand": "pip install --quiet mypy pandas numpy && echo 'CS111 ready!'"
+  "postCreateCommand": "echo 'CS111 ready!'"
 }
