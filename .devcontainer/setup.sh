@@ -3,7 +3,7 @@
 set -e
 
 USERNAME=$(gh api user -q .login)
-REPO_NAME="cs111-${USERNAME}"
+REPO_NAME="26cs111codespaces"
 
 rm -rf /workspaces/26cs111codespaces/.git
 cd /workspaces/26cs111codespaces
