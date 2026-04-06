@@ -1,6 +1,6 @@
 {
   "name": "CS111 Fundamentals of Programming",
-  "build": { "dockerfile": "Dockerfile" },
+  "image": "ghcr.io/kittipitch/cs111-devcontainer:latest",
   "customizations": {
     "vscode": {
       "settings": {
