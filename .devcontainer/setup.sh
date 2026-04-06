@@ -7,6 +7,7 @@ REPO_NAME="26cs111repo"
 
 # Login with full repo permissions (opens browser once)
 unset GITHUB_TOKEN
+echo "unset GITHUB_TOKEN" >> ~/.bashrc
 gh auth login -h github.com -w
 
 rm -rf /workspaces/26cs111codespaces/.git
