@@ -23,8 +23,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push devcontainer image
-        uses: devcontainers/ci@v0.3
+      - name: Build and push image
+        uses: docker/build-push-action@v5
         with:
-          imageName: ghcr.io/kittipitch/cs111-devcontainer
-          push: always
+          context: .devcontainer
+          push: true
+          tags: ghcr.io/kittipitch/cs111-devcontainer:latest
