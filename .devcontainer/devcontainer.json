@@ -1,0 +1,28 @@
+{
+  "name": "CS111 Codespace",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "chat.disableAIFeatures": true,
+        "github.copilot.inlineSuggest.enable": false,
+        "github.copilot.editor.enableAutoCompletions": false,
+        "editor.fontSize": 14,
+        "editor.tabSize": 4,
+        "editor.wordWrap": "on",
+        "python.defaultInterpreterPath": "/usr/bin/python3"
+      },
+      "extensions": [
+        "ms-python.python",
+      ],
+      "extensions.unwanted": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat"
+      ]
+    }
+  },
+  "postCreateCommand": "echo 'CS111 Codespace ready! Python is installed.'"
+}
