@@ -1,24 +1,27 @@
-# CS111 — Intro to Programming
+# CS111 — Fundamentals of Programming
 
-Welcome! This is your starter workspace for CS111.
+Welcome! This is your starter workspace for **CS111: Fundamentals of Programming**.
 
-## Getting Started
+## 🚀 Getting Started
 
-1. Click the green **"Use this template"** button at the top of this page
-2. Name your repo (e.g. `cs111-yourname`) and click **Create repository**
-3. In your new repo, click the green **"Code"** button → **"Codespaces"** tab → **"Create codespace on main"**
-4. Wait ~2 minutes for the environment to set up — Python will be installed automatically
+For complete setup instructions, including how to use this template with GitHub Codespaces, please refer to the main documentation:
 
-## Running Python
+👉 **[CS111 Development Environment Setup (Browser-based Options)](https://github.com/kittipitch/cs111env#browser-based-options)**
 
-Open the terminal (`Ctrl+backtick`) and run:
-```bash
-python cs111/week1.py
-```
+## 🛠️ Included Tools
 
-## Saving Your Work
+This environment is pre-configured with:
+- **Python 3.12**
+- **Microsoft Python & Pylance** extensions
+- **mypy** static type checker (pre-installed and configured)
+- **pandas** and **numpy** libraries
 
-Your files auto-save, but to back them up to GitHub:
-1. Click the **Source Control** icon in the left sidebar
-2. Stage your files with **+**
-3. Write a commit message and press **✓**
+## 📝 Quick Start
+
+1. Wait for the codespace to finish building (check the terminal for the "Ready!" message).
+2. Open any `.py` file to start coding.
+3. Errors and type-checking hints from **mypy** will appear automatically in the "Problems" tab and as red/yellow underlines.
+
+---
+
+*Maintained by the CS111 Instructional Team.*

@@ -13,10 +13,19 @@
         "editor.fontSize": 14,
         "editor.tabSize": 4,
         "editor.wordWrap": "on",
-        "python.defaultInterpreterPath": "/usr/bin/python3"
+        "python.defaultInterpreterPath": "/usr/bin/python3",
+        "python.analysis.typeCheckingMode": "basic",
+        "mypy-type-checker.args": [
+          "--ignore-missing-imports",
+          "--check-untyped-defs"
+        ],
+        "mypy-type-checker.reportingScope": "workspace"
       },
       "extensions": [
         "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy",
+        "ms-python.mypy-type-checker"
       ],
       "extensions.unwanted": [
         "GitHub.copilot",
@@ -24,5 +33,5 @@
       ]
     }
   },
-  "postCreateCommand": "echo 'CS111 Codespace ready! Python is installed.'"
+  "postCreateCommand": "pip3 install --user mypy pandas numpy && echo "CS111 Codespace ready! Python, mypy, pandas, and numpy are installed.""
 }
