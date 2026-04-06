@@ -1,6 +1,9 @@
 {
   "name": "CS111 Fundamentals of Programming",
   "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {}
+  },
   "customizations": {
     "vscode": {
       "settings": {
@@ -32,5 +35,5 @@
       ]
     }
   },
-  "postCreateCommand": "pip3 install mypy pandas numpy && echo "Ready!""
+  "postCreateCommand": "pip3 install mypy pandas numpy && echo 'Ready!'"
 }
