@@ -7,6 +7,10 @@ unset GITHUB_TOKEN
 echo "unset GITHUB_TOKEN" >> ~/.bashrc
 gh auth login -h github.com -w --git-protocol ssh
 
+# Pre-accept GitHub SSH fingerprint so students aren't prompted
+mkdir -p ~/.ssh
+ssh-keyscan github.com >> ~/.ssh/known_hosts 2>/dev/null
+
 USERNAME=$(gh api user -q .login)
 REPO_NAME="26cs111repo"
 REMOTE_URL="git@github.com:${USERNAME}/${REPO_NAME}.git"
@@ -29,7 +33,7 @@ if gh repo create "$REPO_NAME" --private --source=. --remote=origin --push 2>/de
 else
   echo "Repo already exists — connecting to it..."
   git remote add origin "$REMOTE_URL" 2>/dev/null || git remote set-url origin "$REMOTE_URL"
-  git push -u origin main
+  git push -u origin main --force
   echo ""
   echo "✅ Done! Your work is saved at: https://github.com/${USERNAME}/${REPO_NAME}"
 fi
