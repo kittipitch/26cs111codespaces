@@ -5,7 +5,7 @@ set -e
 # Login with full repo permissions (opens browser once)
 unset GITHUB_TOKEN
 echo "unset GITHUB_TOKEN" >> ~/.bashrc
-gh auth login -h github.com -w
+gh auth login -h github.com -w --git-protocol ssh
 
 USERNAME=$(gh api user -q .login)
 REPO_NAME="26cs111repo"
