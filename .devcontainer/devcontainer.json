@@ -18,7 +18,8 @@
       },
       "extensions": [
         "ms-python.python",
-        "ms-python.mypy-type-checker"
+        "ms-python.mypy-type-checker",
+        "chocolatedesue.modern-pdf-preview"
       ],
       "extensions.unwanted": [
         "GitHub.copilot",
