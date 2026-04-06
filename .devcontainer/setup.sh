@@ -28,8 +28,10 @@ if gh repo create "$REPO_NAME" --private --source=. --remote=origin --push 2>/de
   echo "✅ Done! Your work is saved at: https://github.com/${USERNAME}/${REPO_NAME}"
 else
   echo "Repo already exists — connecting to it..."
+  TOKEN=$(gh auth token)
   git remote add origin "$REMOTE_URL" 2>/dev/null || git remote set-url origin "$REMOTE_URL"
-  git push -u origin main
+  git push -u "https://${TOKEN}@github.com/${USERNAME}/${REPO_NAME}.git" main
+  git remote set-url origin "$REMOTE_URL"
   echo ""
   echo "✅ Done! Your work is saved at: https://github.com/${USERNAME}/${REPO_NAME}"
 fi
