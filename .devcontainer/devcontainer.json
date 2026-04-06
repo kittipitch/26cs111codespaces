@@ -1,25 +1,13 @@
 {
   "name": "CS111 Fundamentals of Programming",
-  "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
-  "features": {
-    "ghcr.io/devcontainers/features/python:1": {}
-  },
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
   "customizations": {
     "vscode": {
       "settings": {
         "chat.disableAIFeatures": true,
-        "github.copilot.enable": {
-          "*": false,
-          "python": false
-        },
-        "github.copilot.chat.enable": false,
+        "github.copilot.enable": { "*": false },
         "github.copilot.chat.enabled": false,
-        "github.copilot.chat.welcomeMessage": "never",
-        "github.copilot.inlineSuggest.enable": false,
         "github.copilot.editor.enableAutoCompletions": false,
-        "editor.fontSize": 14,
-        "editor.tabSize": 4,
-        "editor.wordWrap": "on",
         "python.analysis.typeCheckingMode": "basic",
         "mypy-type-checker.args": [
           "--ignore-missing-imports",
@@ -30,15 +18,13 @@
       "extensions": [
         "ms-python.python",
         "ms-python.vscode-pylance",
-        "ms-python.debugpy",
         "ms-python.mypy-type-checker"
       ],
       "extensions.unwanted": [
         "GitHub.copilot",
-        "GitHub.copilot-chat",
-        "GitHub.copilot-labs"
+        "GitHub.copilot-chat"
       ]
     }
   },
-  "postCreateCommand": "pip3 install mypy pandas numpy && echo 'Ready!'"
+  "postCreateCommand": "pip3 install mypy pandas numpy"
 }
