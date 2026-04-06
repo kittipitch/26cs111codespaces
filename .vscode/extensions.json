@@ -1,0 +1,9 @@
+{
+  "unwantedRecommendations": [
+    "ms-python.vscode-pylance",
+    "ms-python.python-debugger",
+    "ms-python.python-environment-manager",
+    "ms-python.autopep8",
+    "dbaeumer.vscode-eslint"
+  ]
+}
