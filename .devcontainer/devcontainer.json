@@ -8,10 +8,15 @@
     "vscode": {
       "settings": {
         "chat.disableAIFeatures": true,
-        "github.copilot.inlineSuggest.enable": false,
-        "github.copilot.editor.enableAutoCompletions": false,
+        "github.copilot.enable": {
+          "*": false,
+          "python": false
+        },
+        "github.copilot.chat.enable": false,
         "github.copilot.chat.enabled": false,
         "github.copilot.chat.welcomeMessage": "never",
+        "github.copilot.inlineSuggest.enable": false,
+        "github.copilot.editor.enableAutoCompletions": false,
         "editor.fontSize": 14,
         "editor.tabSize": 4,
         "editor.wordWrap": "on",
