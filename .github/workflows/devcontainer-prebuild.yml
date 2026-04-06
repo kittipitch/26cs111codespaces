@@ -27,5 +27,4 @@ jobs:
         uses: devcontainers/ci@v0.3
         with:
           imageName: ghcr.io/kittipitch/cs111-devcontainer
-          cacheFrom: ghcr.io/kittipitch/cs111-devcontainer
           push: always
