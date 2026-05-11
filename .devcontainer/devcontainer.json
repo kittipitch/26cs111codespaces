@@ -1,0 +1,40 @@
+{
+  "name": "CS111 Fundamentals of Programming",
+  "image": "ghcr.io/kittipitch/cs111-devcontainer:latest",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "chat.disableAIFeatures": true,
+        "github.copilot.enable": { "*": false },
+        "github.copilot.chat.enabled": false,
+        "github.copilot.editor.enableAutoCompletions": false,
+        "workbench.secondarySideBar.visible": false,
+        "python.defaultInterpreterPath": "/usr/bin/python3",
+        "mypy-type-checker.args": [
+          "--ignore-missing-imports",
+          "--check-untyped-defs"
+        ],
+        "mypy-type-checker.reportingScope": "workspace"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.mypy-type-checker",
+        "chocolatedesue.modern-pdf-preview"
+      ],
+      "extensions.unwanted": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "ms-python.vscode-pylance",
+        "ms-python.python-debugger",
+        "ms-python.python-environment-manager",
+        "ms-python.autopep8",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  },
+  "postCreateCommand": "chmod +x .devcontainer/*.sh && echo 'CS111 ready!'",
+  "postStartCommand": "nohup .devcontainer/autosync.sh > /tmp/autosync.log 2>&1 &"
+}
